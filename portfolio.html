@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+      color: white;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #ffcc00;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 100px 50px;
+      min-height: 100vh;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #ccc;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #ffcc00;
+      color: black;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+
+    .section-title {
+      font-size: 35px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #ffcc00;
+    }
+
+    .about, .projects, .achievements, .contact {
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      padding: 40px;
+      margin: 20px auto;
+      max-width: 1000px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.08);
+      padding: 20px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #ffcc00;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h2>Hello, I'm <span style="color:#ffcc00;">Thiru</span></h2>
+    <p>BTech CSE Student | Aspiring Developer</p>
+    <a href="#about" class="btn">Know More</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about">
+      <p>Hello! I’m Thiru, a BTech CSE student passionate about coding, web development, and problem solving. I love learning new technologies and applying them to create useful and beautiful digital experiences.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="projects-container">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal portfolio showcasing skills and projects.</p>
+        </div>
+        <div class="card">
+          <h3>Hotel Management UI</h3>
+          <p>A mini project for managing hotel booking interfaces.</p>
+        </div>
+        <div class="card">
+          <h3>Snake Game in Java</h3>
+          <p>A fun Java game with advanced features like score tracking and timer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements">
+    <h2 class="section-title">Achievements</h2>
+    <div class="achievements">
+      <ul>
+        <li>Participated in SocioHack 2025 Hackathon</li>
+        <li>Completed certification in Web Development</li>
+        <li>Presented seminar on Truth or Dare Web Project</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:thiru@example.com" style="color:#ffcc00;">thiru@example.com</a></p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/thiru</a></p>
+      <p>GitHub: <a href="#">github.com/thiru</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Thiru | All Rights Reserved</p>
+    <div>
+      <a href="#hero">Back to Top</a>
+    </div>
+  </footer>
+
+</body>
+</html>
